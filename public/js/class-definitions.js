@@ -1134,6 +1134,11 @@ class Lightbulb {
  * @param {Array} foods All the foods in the meal
  */
 
+class Meal {
+  constructor(food) {
+    this.foods = food;
+  }
+}
 
 /**
  * Create a new instance of the Classes you defined above, below!
