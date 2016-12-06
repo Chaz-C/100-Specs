@@ -768,6 +768,44 @@ class Stapler {
  *
  */
 
+class Scientist extends Person {
+  constructor(name, money, age, gender) {
+    super(name, money, age, gender);
+    this.disciplines = [];
+    this.discoveries = [];
+  }
+
+  addDiscipline(discipline) {
+    this.disciplines.push(discipline);
+    return this.disciplines;
+  }
+
+  checkDiscipline(check) {
+    if ( this.disciplines.indexOf(check) > -1 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  addDiscovery(disc) {
+    this.discoveries.push(disc);
+    if ( this.discoveries.length === 1 ) {
+      return `I discovered ${disc}.`;
+    } else if ( this.discoveries.length === 2 ) {
+      return `I discovered ${this.discoveries[0]} and ${this.discoveries[1]}.`;
+    } else {
+      var multi = `${this.discoveries[0]}`;
+      for ( var i = 1; i <= this.discoveries.length; i ++ ) {
+        if ( i === this.discoveries.length - 1) {
+          multi += `, and ${this.discoveries[i]}.`;
+          return `I discovered ${multi}.`;
+        }
+        multi += `, ${this.discoveries[i]}`;
+      }
+    }
+  }
+}
 
 /* Step 36
  *
