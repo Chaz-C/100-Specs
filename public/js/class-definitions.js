@@ -434,6 +434,18 @@ function listLivingOrgClass() {
  *
  */
 
+function favoritePlanet(currentPlanet) {
+  if ( planets.indexOf(currentPlanet) > -1 ) {
+    var newPlanet = planets[Math.floor(Math.random() * planets.length)];
+    if ( newPlanet === currentPlanet) {
+      favoritePlanet(currentPlanet);
+    } else {
+      return `I'm from ${currentPlanet}, but I wish I could go to ${newPlanet}`;
+    }
+  } else {
+    return `${currentPlanet} is not a planet!`;
+  }
+}
 
 /* Step 27
  *
