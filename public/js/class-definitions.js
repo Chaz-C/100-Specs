@@ -360,6 +360,21 @@ function installLinux(type) {
  *
  */
 
+function drink(beerType) {
+  if ( beerType in beers ) {
+    if ( typeof beers[beerType] === 'object' ) {
+      var multiDescription = beers[beerType][0];
+      for ( var i = 1; i < beers[beerType].length; i ++ ) {
+        multiDescription += ` and ${beers[beerType][i]}`;
+      }
+      return `This ${beerType} is ${multiDescription}.`;
+    } else {
+      return `This ${beerType} is ${beers[beerType]}.`;
+    }
+  } else {
+    return false;
+  }
+}
 
 /* Step 24
  *
