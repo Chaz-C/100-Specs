@@ -318,6 +318,9 @@ function sahara_river() {
  *
  */
 
+function addNumbers(x, y) {
+  return x + y;
+}
 
 /* Step 22
  *
