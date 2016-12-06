@@ -438,7 +438,7 @@ function favoritePlanet(currentPlanet) {
   if ( planets.indexOf(currentPlanet) > -1 ) {
     var newPlanet = planets[Math.floor(Math.random() * planets.length)];
     if ( newPlanet === currentPlanet) {
-      favoritePlanet(currentPlanet);
+      return favoritePlanet(currentPlanet);
     } else {
       return `I'm from ${currentPlanet}, but I wish I could go to ${newPlanet}`;
     }
@@ -470,6 +470,22 @@ function favoritePlanet(currentPlanet) {
  *
  */
 
+class Person {
+  constructor(name, money, age, gender) {
+    this.name = name;
+    this.money = money;
+    this.age = age;
+    this.gender = gender;
+  }
+
+  spendMoney(amount) {
+    this.money -= amount;
+  }
+
+  earnMoney(amount) {
+    this.money += amount;
+  }
+}
 
 /* Step 28
  *
