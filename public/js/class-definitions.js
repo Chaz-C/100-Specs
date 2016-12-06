@@ -334,6 +334,13 @@ function addNumbers(x, y) {
  *
  */
 
+function installLinux(type) {
+  if ( linuxFlavors.indexOf(type) > -1 ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* Step 23
  *
