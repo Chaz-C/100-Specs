@@ -829,6 +829,7 @@ class Scientist extends Person {
  */
 
 
+
 /* Step 37
  *
  * WIP
@@ -1001,6 +1002,12 @@ class Scientist extends Person {
  * @param {string} gender  male or female
  */
 
+class Animal {
+  constructor(species, gender) {
+    this.species = species;
+    this.gender = gender;
+  }
+}
 
 /**
  * Step 51
