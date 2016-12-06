@@ -585,6 +585,25 @@ class Pen {
  *
  */
 
+class Garden {
+  constructor(plantsTotal) {
+    this.plantsTotal = plantsTotal;
+    this.isWatered = false;
+  }
+
+  water() {
+    this.isWatered = true;
+  }
+
+  grow() {
+    if ( this.isWatered === false ) {
+      return false;
+    } else {
+      this.plantsTotal += 1;
+      this.isWatered = false;
+    }
+  }
+}
 
 /* Step 32
  *
