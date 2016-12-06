@@ -499,6 +499,13 @@ class Person {
  *
  */
 
+function purchaseLaptop(laptop) {
+  if ( laptop in laptopCosts ) {
+    return `${laptopCosts[laptop]}`;
+  } else {
+    return -1;
+  }
+}
 
 /* Step 29
  *
