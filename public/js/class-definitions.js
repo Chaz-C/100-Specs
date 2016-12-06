@@ -388,6 +388,13 @@ function drink(beerType) {
  *
  */
 
+function browseURL(browser) {
+  if ( browser in browsers ) {
+    return browsers[browser];
+  } else {
+    return false;
+  }
+}
 
 /* Step 25
  *
