@@ -1396,10 +1396,9 @@ Meal.prototype.containsJunkFood = function() {
   for ( let i = 0; i < junkFood.length; i ++ ) {
     if ( this.foods.indexOf(junkFood[i]) > -1 ) {
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 };
 
  /* Steps 91 to 100
@@ -1506,5 +1505,5 @@ var cookieMonsterBlocked = new Cookie('hazelnut').swipedByCookieMonster('Monday'
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+var badForYou = new Meal(['ice cream', 'chips', 'salad']).containsJunkFood();
+var goodForYou = new Meal(['chicken', 'potato']).containsJunkFood();
