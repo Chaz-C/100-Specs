@@ -1496,8 +1496,8 @@ var porchLightsOff = new Lightbulb(true).flipSwitch('');
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+var cookieMonsterPwns  = new Cookie('chocolate').swipedByCookieMonster('Monday');
+var cookieMonsterBlocked = new Cookie('hazelnut').swipedByCookieMonster('Monday');
 
 
  /* Step 100
