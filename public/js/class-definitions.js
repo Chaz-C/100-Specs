@@ -1426,8 +1426,8 @@ var notWarmOrColdAnimal = new Animal('Panda', 'male').isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = new Vehicle('Hyundai', 'Veloster Turbo').drive('Huna St.');
+var forwardDriving = new Vehicle('Honda', 'Fit').drive(null);
 
 
  /* Step 93
