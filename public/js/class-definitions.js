@@ -828,7 +828,27 @@ class Scientist extends Person {
  *
  */
 
+class BankAccount {
+  constructor(balance, owner) {
+    this.balance = balance;
+    this.owner = owner;
+  }
 
+  withdraw(amount) {
+    this.balance -= amount;
+    this.owner.earnMoney(amount);
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+    this.owner.spendMoney(amount);
+  }
+
+  rob(amount, person) {
+    this.balance -= amount;
+    person.earnMoney(amount);
+  }
+}
 
 /* Step 37
  *
