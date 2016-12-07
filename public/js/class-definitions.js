@@ -1160,12 +1160,11 @@ var square = new Shape(4);
 var hexagon = new Shape(6);
 
 // Create 2 boxes
-var cat = new Animal('Cat', 'female');
-var catBox = new Box(cat, true);
+var catBox = new Box(new Animal('Cat', 'female'), true);
 var christmasPresent = new Box('food', false);
 
 // Create 2 doors
-var automaticDoor;
+var automaticDoor = new Door(true);
 var bankVault;
 
 // Create 2 shoes
